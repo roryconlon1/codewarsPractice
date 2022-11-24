@@ -1,9 +1,12 @@
 
 
 import static org.junit.Assert.*;
+
+import org.junit.Before;
 import org.junit.Test;
 
 import javax.sound.midi.Sequence;
+import java.util.Random;
 
 public class KataTest {
 
@@ -144,5 +147,25 @@ public class KataTest {
     public void BasicTests() {
         assertEquals(16, Kata.sum(new int[] { 6, 2, 1, 8, 10}));
     }
+
+    @Test
+    public void testExampleCases() {
+        assertArrayEquals(new int[]{1,5}, Kata.minMax(new int[]{1,2,3,4,5}));
+        assertArrayEquals(new int[]{5, 2334454}, Kata.minMax(new int[]{2334454,5}));
+        assertArrayEquals(new int[]{1, 1}, Kata.minMax(new int[]{1}));
     }
+
+    Random rand;
+    @Before
+    public void initTest() {
+        rand = new Random();
+    }
+    @Test
+    public void minMaxRandomTest() {
+        for(int i = 0; i < 20; i++) {
+            int r = rand.nextInt();
+            assertArrayEquals(new int[]{r, r}, Kata.minMax(new int[]{r}));
+        }
+    }
+}
 

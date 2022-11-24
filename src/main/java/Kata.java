@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.OptionalInt;
+import java.util.*;
 import java.util.stream.IntStream;
 
 public class Kata {
@@ -178,6 +175,14 @@ public class Kata {
         }
 
         return sum - lowest - highest;
+    }
+
+
+        public static int[] minMax(int[] arr) {
+            int min  = Arrays.stream(arr).min().getAsInt();
+            int max = Arrays.stream(arr).max().getAsInt();
+            int [] minimumAndMaximum = {min, max};
+            return minimumAndMaximum;
     }
 }
 
