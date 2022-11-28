@@ -152,7 +152,7 @@ public class Kata {
         String needle = "needle";
         int position = 0;
         for (int i = 0; i < haystack.length; i++) {
-            if (haystack[i] == needle){
+            if (haystack[i] == needle) {
                 position = i;
             }
         }
@@ -168,21 +168,28 @@ public class Kata {
         int lowest = numbers[0];
         int highest = numbers[0];
         int sum = 0;
-        for (int i:numbers) {
+        for (int i : numbers) {
             lowest = Math.min(lowest, i);
             highest = Math.max(highest, i);
-            sum +=i;
+            sum += i;
         }
 
         return sum - lowest - highest;
     }
 
 
-        public static int[] minMax(int[] arr) {
-            int min  = Arrays.stream(arr).min().getAsInt();
-            int max = Arrays.stream(arr).max().getAsInt();
-            int [] minimumAndMaximum = {min, max};
-            return minimumAndMaximum;
+    public static int[] minMax(int[] arr) {
+        int min = Arrays.stream(arr).min().getAsInt();
+        int max = Arrays.stream(arr).max().getAsInt();
+        int[] minimumAndMaximum = {min, max};
+        return minimumAndMaximum;
+    }
+
+    public static boolean checkForFactor(int base, int factor) {
+        if (base % factor == 0) {
+            return true;
+        }
+        return false;
     }
 }
 
