@@ -175,5 +175,14 @@ public class KataTest {
         assertEquals(true, Kata.checkForFactor(2450, 5));
         assertEquals(true, Kata.checkForFactor(24612, 3));
     }
+
+    @Test
+    public void simpleArray1() {
+        assertEquals(2, getActualFor(1, 1, 2));
+    }
+
+    private int getActualFor(int... numbers) {
+        return Kata.stray(numbers);
+    }
 }
 

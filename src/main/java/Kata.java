@@ -191,5 +191,15 @@ public class Kata {
         }
         return false;
     }
+
+//    find odd one out in array, sort elements, if 1 == 2 then return last one otherwise return 1st one
+    public static int stray(int[] numbers) {
+        Arrays.sort(numbers);
+        if (numbers[0] == numbers[1]) {
+            return numbers[numbers.length - 1];
+        } else {
+            return numbers[0];
+        }
+    }
 }
 
