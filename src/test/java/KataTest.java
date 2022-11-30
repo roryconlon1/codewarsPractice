@@ -197,5 +197,11 @@ public class KataTest {
         assertEquals(123, Kata.otherAngle(45,12));
         assertEquals(70, Kata.otherAngle(50,60));
     }
+
+    @Test
+    public void testSomethingElse() {
+        assertEquals(16, Kata.areaOrPerimeter(4 , 4));
+        assertEquals(32, Kata.areaOrPerimeter(6 , 10));
+    }
 }
 

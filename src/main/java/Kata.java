@@ -214,5 +214,9 @@ public class Kata {
     public static int otherAngle(int angle1, int angle2) {
         return 180 - angle1 - angle2;
     }
+
+    public static int areaOrPerimeter(int l, int w) {
+        return l == w ? l * w : (l + w) * 2;
+    }
 }
 
