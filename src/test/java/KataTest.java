@@ -184,5 +184,18 @@ public class KataTest {
     private int getActualFor(int... numbers) {
         return Kata.stray(numbers);
     }
+
+    @Test
+    public void sampleTests() {
+        assertArrayEquals(new int[] {2, 4, 6}, Kata.map(new int[] {1, 2, 3}));
+        assertArrayEquals(new int[] {8, 2, 2, 2, 8}, Kata.map(new int[] {4, 1, 1, 1, 4}));
+        assertArrayEquals(new int[] {2, 2, 2, 2, 2, 2}, Kata.map(new int[] {1, 1, 1, 1, 1, 1}));
+    }
+
+    @Test
+    public void testOtherAngle() {
+        assertEquals(123, Kata.otherAngle(45,12));
+        assertEquals(70, Kata.otherAngle(50,60));
+    }
 }
 

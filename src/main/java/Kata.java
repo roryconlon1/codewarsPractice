@@ -192,7 +192,7 @@ public class Kata {
         return false;
     }
 
-//    find odd one out in array, sort elements, if 1 == 2 then return last one otherwise return 1st one
+    //    find odd one out in array, sort elements, if 1 == 2 then return last one otherwise return 1st one
     public static int stray(int[] numbers) {
         Arrays.sort(numbers);
         if (numbers[0] == numbers[1]) {
@@ -200,6 +200,19 @@ public class Kata {
         } else {
             return numbers[0];
         }
+    }
+
+    public static int[] map(int[] arr) {
+        int[] arr2 = new int[arr.length];
+        for (int a = 0; a < arr.length; a++) {
+            int i = arr[a] * 2;
+            arr2[a] = i;
+        }
+        return arr2;
+    }
+
+    public static int otherAngle(int angle1, int angle2) {
+        return 180 - angle1 - angle2;
     }
 }
 
