@@ -268,5 +268,9 @@ public class Kata {
 //        so better to get english from hashmap by its key
         return languageGreeting.getOrDefault(language, languageGreeting.get("english"));
     }
+
+    public static String noSpace(final String x) {
+        return x.replaceAll(" ", "");
+    }
 }
 
