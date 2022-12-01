@@ -238,7 +238,35 @@ public class Kata {
             String str = sb.toString().replaceFirst("\\s++$", "");
             return str;
         }
-            return null;
+        return null;
+    }
+
+    public static String greet(String language) {
+        Map<String, String> languageGreeting = new HashMap<>();
+        languageGreeting.put("english", "Welcome");
+        languageGreeting.put("czech", "Vitejte");
+        languageGreeting.put("dutch", "Welkom");
+        languageGreeting.put("danish", "Velkomst");
+        languageGreeting.put("estonian", "Tere tulemast");
+        languageGreeting.put("finnish", "Tervetuloa");
+        languageGreeting.put("flemish", "Welgekomen");
+        languageGreeting.put("french", "Bienvenue");
+        languageGreeting.put("german", "Willkommen");
+        languageGreeting.put("irish", "Failte");
+        languageGreeting.put("italian", "Benvenuto");
+        languageGreeting.put("latvian", "Gaidits");
+        languageGreeting.put("lithuanian", "Laukiamas");
+        languageGreeting.put("polish", "Witamy");
+        languageGreeting.put("spanish", "Bienvenido");
+        languageGreeting.put("swedish", "Valkommen");
+        languageGreeting.put("welsh", "Croeso");
+
+//        return languageGreeting.containsKey(language) ? languageGreeting.get(language) : "Welcome";
+
+//        codewars solution, getOrDefault, if key is not existent will default to 2nd arg
+//        literally 2nd arg, so either can be a String, ie this doesn't exist, or this case default to english
+//        so better to get english from hashmap by its key
+        return languageGreeting.getOrDefault(language, languageGreeting.get("english"));
     }
 }
 

@@ -218,5 +218,12 @@ public class KataTest {
     public void testEmptyArg() {
         assertNull("Must return null when the arg is empty string", Kata.toJadenCase(""));
     }
+
+    @Test
+    public void exampleTest() {
+        assertEquals("Your function should have returned 'Welcome'. Try again.","Welcome", Kata.greet("english"));
+        assertEquals("Your function should have returned 'Welkom'. Try again.", "Welkom", Kata.greet("dutch"));
+        assertEquals("Your function should have returned 'Welcome'. Try again.", "Welcome", Kata.greet("IP_ADDRESS_INVALID"));
+    }
 }
 
