@@ -218,5 +218,27 @@ public class Kata {
     public static int areaOrPerimeter(int l, int w) {
         return l == w ? l * w : (l + w) * 2;
     }
+
+    public static String toJadenCase(String phrase) {
+        if (phrase == null) {
+            return null;
+        } else if (phrase.length() > 0) {
+            List<String> stringList = new ArrayList<>();
+            String[] words = phrase.toLowerCase().split(" ");
+            for (int i = 0; i < words.length; i++) {
+                String word = words[i];
+                stringList.add(String.valueOf(word.charAt(0)).toUpperCase() + word.substring(1));
+            }
+            //StringBuilder also works, stringbuffer is threading safe as is synchronized
+            //but overkill to have synchro in single thread so although similar timing in this string builder is better
+            StringBuffer sb = new StringBuffer();
+            for (int i = 0; i < stringList.size(); i++) {
+                sb.append(stringList.get(i) + " ");
+            }
+            String str = sb.toString().replaceFirst("\\s++$", "");
+            return str;
+        }
+            return null;
+    }
 }
 

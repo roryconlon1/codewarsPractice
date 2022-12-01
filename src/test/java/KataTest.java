@@ -203,5 +203,20 @@ public class KataTest {
         assertEquals(16, Kata.areaOrPerimeter(4 , 4));
         assertEquals(32, Kata.areaOrPerimeter(6 , 10));
     }
+
+    @Test
+    public void test() {
+        assertEquals("toJadenCase doesn't return a valide JadenCase String! try again please :)", "Most Trees Are Blue", Kata.toJadenCase("most trees are blue"));
+    }
+
+    @Test
+    public void testNullArg() {
+        assertNull("Must return null when the arg is null", Kata.toJadenCase(null));
+    }
+
+    @Test
+    public void testEmptyArg() {
+        assertNull("Must return null when the arg is empty string", Kata.toJadenCase(""));
+    }
 }
 
