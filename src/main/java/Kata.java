@@ -272,5 +272,11 @@ public class Kata {
     public static String noSpace(final String x) {
         return x.replaceAll(" ", "");
     }
+
+    public static int findDifference(final int[] firstCuboid, final int[] secondCuboid) {
+       int first = Arrays.stream(firstCuboid).reduce(1, (a, b) -> a * b);
+       int second = Arrays.stream(secondCuboid).reduce(1, (a, b) -> a * b);
+       return first > second ? first - second : second - first;
+    }
 }
 

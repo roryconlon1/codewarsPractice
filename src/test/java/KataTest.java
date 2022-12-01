@@ -233,5 +233,14 @@ public class KataTest {
         assertEquals("jfBmgklf8hg88lbe8", Kata.noSpace("jfBm  gk lf8hg  88lbe8 "));
         assertEquals("8jaam", Kata.noSpace("8j aam"));
     }
+
+    @Test
+    public void sampleTestCases() {
+        assertEquals(14, Kata.findDifference(new int[]{3, 2, 5}, new int[]{1, 4, 4}));
+//        assertEquals(106, Kata.findDifference(new int[]{9, 7, 2}, new int[]{5, 2, 2}));
+//        assertEquals(30, Kata.findDifference(new int[]{11, 2, 5}, new int[]{1, 10, 8}));
+//        assertEquals(31, Kata.findDifference(new int[]{4, 4, 7}, new int[]{3, 9, 3}));
+//        assertEquals(0, Kata.findDifference(new int[]{15, 20, 25}, new int[]{10, 30, 25}));
+    }
 }
 
