@@ -277,10 +277,10 @@ public class Kata {
 //        reduce has 2 arguments start and running total, start at 1 and times by each number in the array
 //        needs to start at 1 for multiplication, 0 for addition
 
-//        int first = Arrays.stream(firstCuboid).reduce(1, (a, b) -> a * b);
-//        int second = Arrays.stream(secondCuboid).reduce(1, (a, b) -> a * b);
-//        return first > second ? first - second : second - first;
-//}
+        int first = Arrays.stream(firstCuboid).reduce(1, (a, b) -> a * b);
+        int second = Arrays.stream(secondCuboid).reduce(1, (a, b) -> a * b);
+        return first > second ? first - second : second - first;
+}
 //        codewars one, tried first *= for each cuboid at postion i for each iteration
 //        int first = 1;
 //        int second = 1;
