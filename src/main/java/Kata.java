@@ -291,8 +291,11 @@ public class Kata {
 //    }
 
     public static boolean getXO (String str) {
+//        new map to make str char array, all lowercase string to char count consistent
         Map<Character, Integer> charCount = new HashMap<>();
         char[] charArray = str.toLowerCase().toCharArray();
+//        for each char get its key and increment value by 1
+//        or if key doesn't exist, put a new key of char in and initialise at 1
         for (char i: charArray){
             if (charCount.containsKey(i)){
                 charCount.put(i, charCount.get(i) + 1);
