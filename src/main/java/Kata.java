@@ -279,7 +279,7 @@ public class Kata {
         int first = Arrays.stream(firstCuboid).reduce(1, (a, b) -> a * b);
         int second = Arrays.stream(secondCuboid).reduce(1, (a, b) -> a * b);
         return first > second ? first - second : second - first;
-}
+    }
 //        codewars one, tried first *= for each cuboid at postion i for each iteration
 //        int first = 1;
 //        int second = 1;
@@ -290,20 +290,28 @@ public class Kata {
 //        return first > second ? first - second : second - first;
 //    }
 
-    public static boolean getXO (String str) {
+    public static boolean getXO(String str) {
 //        new map to make str char array, all lowercase string to char count consistent
         Map<Character, Integer> charCount = new HashMap<>();
         char[] charArray = str.toLowerCase().toCharArray();
 //        for each char get its key and increment value by 1
 //        or if key doesn't exist, put a new key of char in and initialise at 1
-        for (char i: charArray){
-            if (charCount.containsKey(i)){
+        for (char i : charArray) {
+            if (charCount.containsKey(i)) {
                 charCount.put(i, charCount.get(i) + 1);
             } else {
                 charCount.put(i, 1);
             }
         }
         return charCount.get('x') == charCount.get('o');
+    }
+
+    public static int paperWork(int n, int m) {
+        if (n < 0 || m < 0) {
+            return 0;
+        } else {
+            return n * m;
+        }
     }
 }
 

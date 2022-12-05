@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import javax.sound.midi.Sequence;
+import java.awt.print.Paper;
 import java.util.Random;
 
 public class KataTest {
@@ -276,6 +277,31 @@ public class KataTest {
     @Test
     public void testSomething7() {
         assertEquals(false, Kata.getXO("Xxxxertr34"));
+    }
+
+    @Test
+    public void testo1(){
+        assertEquals("Failed at paperWork(5,5)",25, Kata.paperWork(5,5));
+    }
+
+    @Test
+    public void testo2(){
+        assertEquals("Failed at paperWork(5,-5)",0, Kata.paperWork(5,-5));
+    }
+
+    @Test
+    public void testo3(){
+        assertEquals("Failed at paperWork(-5,-5)",0, Kata.paperWork(-5,-5));
+    }
+
+    @Test
+    public void testo4(){
+        assertEquals("Failed at paperWork(-5,5)",0, Kata.paperWork(-5,5));
+    }
+
+    @Test
+    public void testo5(){
+        assertEquals("Failed at paperWork(5,0)",0, Kata.paperWork(5,0));
     }
 }
 
