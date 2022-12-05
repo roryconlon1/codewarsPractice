@@ -237,10 +237,45 @@ public class KataTest {
     @Test
     public void sampleTestCases() {
         assertEquals(14, Kata.findDifference(new int[]{3, 2, 5}, new int[]{1, 4, 4}));
-//        assertEquals(106, Kata.findDifference(new int[]{9, 7, 2}, new int[]{5, 2, 2}));
-//        assertEquals(30, Kata.findDifference(new int[]{11, 2, 5}, new int[]{1, 10, 8}));
-//        assertEquals(31, Kata.findDifference(new int[]{4, 4, 7}, new int[]{3, 9, 3}));
-//        assertEquals(0, Kata.findDifference(new int[]{15, 20, 25}, new int[]{10, 30, 25}));
+        assertEquals(106, Kata.findDifference(new int[]{9, 7, 2}, new int[]{5, 2, 2}));
+        assertEquals(30, Kata.findDifference(new int[]{11, 2, 5}, new int[]{1, 10, 8}));
+        assertEquals(31, Kata.findDifference(new int[]{4, 4, 7}, new int[]{3, 9, 3}));
+        assertEquals(0, Kata.findDifference(new int[]{15, 20, 25}, new int[]{10, 30, 25}));
+    }
+
+    @Test
+    public void testSomething1() {
+        assertEquals(true, Kata.getXO("xxxooo"));
+    }
+
+    @Test
+    public void testSomething2() {
+        assertEquals(true, Kata.getXO("xxxXooOo"));
+    }
+
+    @Test
+    public void testSomething3() {
+        assertEquals(false, Kata.getXO("xxx23424esdsfvxXXOOooo"));
+    }
+
+    @Test
+    public void testSomething4() {
+        assertEquals(false, Kata.getXO("xXxxoewrcoOoo"));
+    }
+
+    @Test
+    public void testSomething5() {
+        assertEquals(false, Kata.getXO("XxxxooO"));
+    }
+
+    @Test
+    public void testSomething6() {
+        assertEquals(true, Kata.getXO("zssddd"));
+    }
+
+    @Test
+    public void testSomething7() {
+        assertEquals(false, Kata.getXO("Xxxxertr34"));
     }
 }
 

@@ -101,7 +101,6 @@ public class Kata {
         char[] string = str.toCharArray();
         Integer total = 0;
         for (int i = 0; i < string.length; i++) {
-            System.out.println(i);
             if (string[i] == letter) {
                 total += 1;
             }
@@ -290,5 +289,18 @@ public class Kata {
 //        }
 //        return first > second ? first - second : second - first;
 //    }
+
+    public static boolean getXO (String str) {
+        Map<Character, Integer> charCount = new HashMap<>();
+        char[] charArray = str.toLowerCase().toCharArray();
+        for (char i: charArray){
+            if (charCount.containsKey(i)){
+                charCount.put(i, charCount.get(i) + 1);
+            } else {
+                charCount.put(i, 1);
+            }
+        }
+        return charCount.get('x') == charCount.get('o');
+    }
 }
 
