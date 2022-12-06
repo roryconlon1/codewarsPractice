@@ -317,5 +317,20 @@ public class KataTest {
         assertEquals("'multiply' should return a multiplied by b!", 10, Kata.arithmetic(5, 2, "multiply"));
         assertEquals("'divide' should return a divided by b!", 4, Kata.arithmetic(8, 2, "divide"));
     }
+
+    @Test
+    public void test_factorial0() {
+        assertEquals(1, Kata.factorial(0));
+    }
+
+    @Test
+    public void test_factorial3() {
+        assertEquals(6, Kata.factorial(3));
+    }
+
+    @Test
+    public void test_factorial5() {
+        assertEquals(120, Kata.factorial(5));
+    }
 }
 

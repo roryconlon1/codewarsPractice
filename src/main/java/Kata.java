@@ -331,5 +331,13 @@ public class Kata {
         }
         return a + b;
     }
+
+    public static int factorial(int n) {
+        if (n < 0 || n > 12) {
+            throw new IllegalArgumentException("nah");
+        }
+        return n > 0 ? n * factorial(n - 1) : 1;
+    }
+
 }
 
