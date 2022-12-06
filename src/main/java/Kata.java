@@ -313,11 +313,23 @@ public class Kata {
             return n * m;
         }
     }
+
     public static int nthPower(int[] array, int n) {
-        if (array.length  >= n + 1) {
+        if (array.length >= n + 1) {
             return (int) Math.pow(array[n], n);
         }
         return -1;
+    }
+
+    public static int arithmetic(int a, int b, String operator) {
+        if (operator == "multiply") {
+            return a * b;
+        } else if (operator == "subtract") {
+            return a - b;
+        } else if (operator == "divide") {
+            return a / b;
+        }
+        return a + b;
     }
 }
 

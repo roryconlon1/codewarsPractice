@@ -309,5 +309,13 @@ public class KataTest {
         assertEquals(8, Kata.nthPower(new int[] {3,1,2,2}, 3));
         assertEquals(4, Kata.nthPower(new int[] {3,1,2}, 2));
     }
+
+    @Test
+    public void testBasic() {
+        assertEquals("'add' should return the two numbers added together!", 3, Kata.arithmetic(1, 2, "add"));
+        assertEquals("'subtract' should return a minus b!", 6, Kata.arithmetic(8, 2, "subtract"));
+        assertEquals("'multiply' should return a multiplied by b!", 10, Kata.arithmetic(5, 2, "multiply"));
+        assertEquals("'divide' should return a divided by b!", 4, Kata.arithmetic(8, 2, "divide"));
+    }
 }
 
