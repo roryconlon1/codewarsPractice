@@ -313,5 +313,11 @@ public class Kata {
             return n * m;
         }
     }
+    public static int nthPower(int[] array, int n) {
+        if (array.length  >= n + 1) {
+            return (int) Math.pow(array[n], n);
+        }
+        return -1;
+    }
 }
 

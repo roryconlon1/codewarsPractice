@@ -303,5 +303,11 @@ public class KataTest {
     public void testo5(){
         assertEquals("Failed at paperWork(5,0)",0, Kata.paperWork(5,0));
     }
+    @Test
+    public void basicTests2() {
+        assertEquals(-1, Kata.nthPower(new int[] {1,2}, 2));
+        assertEquals(8, Kata.nthPower(new int[] {3,1,2,2}, 3));
+        assertEquals(4, Kata.nthPower(new int[] {3,1,2}, 2));
+    }
 }
 
