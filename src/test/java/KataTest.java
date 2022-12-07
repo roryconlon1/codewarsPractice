@@ -332,5 +332,11 @@ public class KataTest {
     public void test_factorial5() {
         assertEquals(120, Kata.factorial(5));
     }
+
+    @Test
+    public void publicTests() {
+//        assertEquals(true, Kata.isTriangle(1,2,2));
+        assertEquals(false, Kata.isTriangle(7,2,2));
+    }
 }
 

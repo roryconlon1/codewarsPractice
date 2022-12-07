@@ -3,6 +3,9 @@ import java.util.stream.IntStream;
 
 public class Kata {
 
+    public Kata() {
+    }
+
     public static String rps(String p1, String p2) {
         if (p1 == "rock" && p2 == "scissors") {
             return "Player 1 won!";
@@ -339,5 +342,20 @@ public class Kata {
         return n > 0 ? n * factorial(n - 1) : 1;
     }
 
+    public static boolean isTriangle(int a, int b, int c) {
+//        if (a + b > c || a + c > b || b + c > a)
+//        first one doesn't work as will execute if one of the conditions is met
+//        want to check all conditions so need to swap round what looking for
+//        if a + b > c it will execute even if a + c !> b
+//        therefore need to check if any don't satisfy the criteria and if one of them doesn't it will be true
+//        however as its opposite we want it to return as false
+        return ! (a + b <= c || a + c <= b || b + c <= a);
+//        if (a + b <= c || a + c <= b || b + c <= a) {
+//            return false;
+//        }
+//        return true;
+//        or could do opposite and see if all conditions are met with &&
+//        return a + b > c && a + c > b && c + b > a;
+    }
 }
 
