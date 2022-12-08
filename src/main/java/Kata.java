@@ -73,13 +73,13 @@ public class Kata {
         return false;
     }
 
-    public static void main(String[] args) {
-        String hello = helloWorld();
-        System.out.println(hello);
-        int[] arr = {13, 7, 6, 45, 21, 9, 101, 102};
-        int[] sorted = sortedNumber(arr);
-        System.out.println(Arrays.toString(sorted));
-    }
+//    public static void main(String[] args) {
+//        String hello = helloWorld();
+//        System.out.println(hello);
+//        int[] arr = {13, 7, 6, 45, 21, 9, 101, 102};
+//        int[] sorted = sortedNumber(arr);
+//        System.out.println(Arrays.toString(sorted));
+//    }
 
     public static String helloWorld() {
         return "Hello World";
@@ -357,5 +357,37 @@ public class Kata {
 //        or could do opposite and see if all conditions are met with &&
 //        return a + b > c && a + c > b && c + b > a;
     }
+    public static void main(String[] args) {
+        int[] arr = new int[]{3, 6, 2, 8, 9, 8, 4, 6, 8, 3};
+        highLow(arr);
+    }
+
+    public static void highLow(int[] nums) {
+        int[] sortedArr = Arrays.stream(nums).sorted().toArray();
+        System.out.println(sortedArr[0]);
+        System.out.println(sortedArr[nums.length - 1]);
+//        System.out.println(Arrays.stream(nums).max());
+//        System.out.println(Arrays.stream(nums).min());
+
+        Map<Integer, Integer> occurence = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (occurence.get(nums[i]) == null){
+                occurence.put(nums[i], 1);
+            } else {
+                occurence.put(nums[i], occurence.get(nums[i]) +1);
+            }
+        }
+        int biggestKey = 0;
+        int biggestValue = 0;
+        for (Integer key: occurence.keySet()){
+            if (occurence.get(key) > biggestValue ) {
+                biggestKey = key;
+                biggestValue = occurence.get(key);
+            }
+        }
+        System.out.println(biggestKey);
+        System.out.println(occurence);
+    }
+
 }
 
