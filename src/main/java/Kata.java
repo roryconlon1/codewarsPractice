@@ -415,9 +415,11 @@ public class Kata {
         if (num < 2) {
             return false;
         }
-        if (num == 2){
+        if (num == 2) {
             return true;
         }
+//        non prime numbers need to be divisible by a number before or at square root
+//        easier to loop over numbers in sqrt than all numbers and saves on memory
         for (int n = 2; n < Math.sqrt(num) + 1; n++) {
             if (num % n == 0) {
                 return false;
