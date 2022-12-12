@@ -395,15 +395,30 @@ public class Kata {
         return total;
     }
 
+//    public static boolean isPrime(int num) {
+//        if (num < 2) {
+//            return false;
+//        }
+//        List<Integer> listOfNums = new ArrayList<>();
+//        for (int i = 1; i < num + 1; i++) {
+//            listOfNums.add(i);
+//        }
+//        for (int n = 2; n < listOfNums.size(); n++) {
+//            if (num % n == 0) {
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
+
     public static boolean isPrime(int num) {
         if (num < 2) {
             return false;
         }
-        List<Integer> listOfNums = new ArrayList<>();
-        for (int i = 1; i < num + 1; i++) {
-            listOfNums.add(i);
+        if (num == 2){
+            return true;
         }
-        for (int n = 2; n < listOfNums.size(); n++) {
+        for (int n = 2; n < Math.sqrt(num) + 1; n++) {
             if (num % n == 0) {
                 return false;
             }
