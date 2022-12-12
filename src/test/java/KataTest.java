@@ -339,5 +339,44 @@ public class KataTest {
         assertEquals(false, Kata.isTriangle(7,2,2));
     }
 
+//    @Test
+//    public void testEmptyArray() throws Exception {
+//        assertEquals("Empty arrays should have a max of 0", 0, Kata.sequence(new int[]{}));
+//    }
+//    @Test
+//    public void testExampleArray() throws Exception {
+//        assertEquals("Example array should have a max of 6", 6, Kata.sequence(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
+//    }
+
+    @Test
+    public void testBasicss() {
+        assertFalse("0  is not prime", Kata.isPrime(0));
+        assertFalse("1  is not prime", Kata.isPrime(1));
+        assertTrue ("2  is prime",     Kata.isPrime(2));
+        assertTrue ("73 is prime",     Kata.isPrime(73));
+        assertFalse("75 is not prime", Kata.isPrime(75));
+        assertFalse("-1 is not prime", Kata.isPrime(-1));
+    }
+
+    @Test
+    public void testPrime() {
+        assertTrue("3 is prime", Kata.isPrime(3));
+        assertTrue("5 is prime", Kata.isPrime(5));
+        assertTrue("7 is prime", Kata.isPrime(7));
+        assertTrue("41 is prime", Kata.isPrime(41));
+        assertTrue("5099 is prime", Kata.isPrime(5099));
+    }
+
+    @Test
+    public void testNotPrime() {
+        assertFalse("4 is not prime", Kata.isPrime(4));
+        assertFalse("6 is not prime", Kata.isPrime(6));
+        assertFalse("8 is not prime", Kata.isPrime(8));
+        assertFalse("9 is not prime", Kata.isPrime(9));
+        assertFalse("45 is not prime", Kata.isPrime(45));
+        assertFalse("-5 is not prime", Kata.isPrime(-5));
+        assertFalse("-8 is not prime", Kata.isPrime(-8));
+        assertFalse("-41 is not prime", Kata.isPrime(-41));
+    }
 }
 

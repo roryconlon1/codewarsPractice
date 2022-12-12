@@ -349,7 +349,7 @@ public class Kata {
 //        if a + b > c it will execute even if a + c !> b
 //        therefore need to check if any don't satisfy the criteria and if one of them doesn't it will be true
 //        however as its opposite we want it to return as false
-        return ! (a + b <= c || a + c <= b || b + c <= a);
+        return !(a + b <= c || a + c <= b || b + c <= a);
 //        if (a + b <= c || a + c <= b || b + c <= a) {
 //            return false;
 //        }
@@ -357,6 +357,7 @@ public class Kata {
 //        or could do opposite and see if all conditions are met with &&
 //        return a + b > c && a + c > b && c + b > a;
     }
+
     public static void main(String[] args) {
         int[] arr = new int[]{3, 6, 2, 8, 9, 8, 4, 6, 8, 3};
         highLow(arr);
@@ -371,22 +372,43 @@ public class Kata {
 
         Map<Integer, Integer> occurence = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            if (occurence.get(nums[i]) == null){
+            if (occurence.get(nums[i]) == null) {
                 occurence.put(nums[i], 1);
             } else {
-                occurence.put(nums[i], occurence.get(nums[i]) +1);
+                occurence.put(nums[i], occurence.get(nums[i]) + 1);
             }
         }
         int biggestKey = 0;
         int biggestValue = 0;
-        for (Integer key: occurence.keySet()){
-            if (occurence.get(key) > biggestValue ) {
+        for (Integer key : occurence.keySet()) {
+            if (occurence.get(key) > biggestValue) {
                 biggestKey = key;
                 biggestValue = occurence.get(key);
             }
         }
         System.out.println(biggestKey);
         System.out.println(occurence);
+    }
+
+    public static int sequence(int[] arr) {
+        int total = Arrays.stream(arr).reduce(0, (a, b) -> a + b);
+        return total;
+    }
+
+    public static boolean isPrime(int num) {
+        if (num < 2) {
+            return false;
+        }
+        List<Integer> listOfNums = new ArrayList<>();
+        for (int i = 1; i < num + 1; i++) {
+            listOfNums.add(i);
+        }
+        for (int n = 2; n < listOfNums.size(); n++) {
+            if (num % n == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
 }
