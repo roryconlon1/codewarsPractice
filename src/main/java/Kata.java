@@ -429,17 +429,24 @@ public class Kata {
     }
 
     public static int[] deleteNth(int[] elements, int maxOccurrences) {
+//        make map of each occurrence of number in an array
         Map<Integer, Integer> occurrenceMap = new HashMap<>();
+//        make new list to store nums if under occurrence in original
         List<Integer> revisedList = new ArrayList<>();
         for (int i = 0; i < elements.length; i++) {
+//            if doesn't exist in map add to map otherwise increment value by 1
             if (occurrenceMap.get(elements[i]) == null) {
                 occurrenceMap.put(elements[i], 1);
             } else {
                 occurrenceMap.put(elements[i], occurrenceMap.get(elements[i]) + 1);
             }
+//            once in map, if the value for the key is <= to the max occurrence then add to the new list
+//            otherwise it won't be added
             if (occurrenceMap.get(elements[i]) <= maxOccurrences) {
                 revisedList.add(elements[i]);
             }
+//            a number will always be added to the map however if it exceeds the max occurrence then
+//            the last check will not pass and so will not run/won't be added.
         }
         return revisedList.stream().mapToInt(Integer::valueOf).toArray();
     }
