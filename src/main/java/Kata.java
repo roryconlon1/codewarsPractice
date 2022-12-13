@@ -428,5 +428,20 @@ public class Kata {
         return true;
     }
 
+    public static int[] deleteNth(int[] elements, int maxOccurrences) {
+        Map<Integer, Integer> occurrenceMap = new HashMap<>();
+        List<Integer> revisedList = new ArrayList<>();
+        for (int i = 0; i < elements.length; i++) {
+            if (occurrenceMap.get(elements[i]) == null) {
+                occurrenceMap.put(elements[i], 1);
+            } else {
+                occurrenceMap.put(elements[i], occurrenceMap.get(elements[i]) + 1);
+            }
+            if (occurrenceMap.get(elements[i]) <= maxOccurrences) {
+                revisedList.add(elements[i]);
+            }
+        }
+        return revisedList.stream().mapToInt(Integer::valueOf).toArray();
+    }
 }
 
