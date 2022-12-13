@@ -450,5 +450,13 @@ public class Kata {
         }
         return revisedList.stream().mapToInt(Integer::valueOf).toArray();
     }
+
+    public static int solveSuperMarketQueue(int[] customers, int n) {
+        int total = 0;
+        for (int i = 0; i < customers.length; i++) {
+            total += customers[i];
+        }
+        return total / n;
+    }
 }
 
