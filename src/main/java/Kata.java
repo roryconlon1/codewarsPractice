@@ -458,5 +458,19 @@ public class Kata {
         }
         return total / n;
     }
+
+    public static String minValOfArr(int[] arr) {
+        int min = arr[0];
+        int max = arr[0];
+        for (int i = 0; i <= arr.length - 1; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+                System.out.println(min);
+            } else if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        return "the smallest number is " + min + "\n" + "the largest number is " + max;
+    }
 }
 
