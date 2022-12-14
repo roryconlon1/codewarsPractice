@@ -451,12 +451,22 @@ public class Kata {
         return revisedList.stream().mapToInt(Integer::valueOf).toArray();
     }
 
+    //    public static int solveSuperMarketQueue(int[] customers, int n) {
+//        int total = 0;
+//        for (int i = 0; i < customers.length; i++) {
+//            total += customers[i];
+//        }
+//        return total / n;
+//    }
     public static int solveSuperMarketQueue(int[] customers, int n) {
-        int total = 0;
+        int[] result = new int[n];
         for (int i = 0; i < customers.length; i++) {
-            total += customers[i];
+            result[0] += customers[i];
+            System.out.println(Arrays.toString(result));
+            Arrays.sort(result);
+            System.out.println(Arrays.toString(result));
         }
-        return total / n;
+        return result[n - 1];
     }
 
     public static String minValOfArr(int[] arr) {
