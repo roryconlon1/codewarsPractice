@@ -482,5 +482,33 @@ public class Kata {
         }
         return "the smallest number is " + min + "\n" + "the largest number is " + max;
     }
+
+//    public static String howMuchILoveYou(int nb_petals) {
+//        Map<Integer, String > phrases = new HashMap<>();
+//        phrases.put(1, "I love you");
+//        phrases.put(2, "a little");
+//        phrases.put(3, "a lot");
+//        phrases.put(4, "passionately");
+//        phrases.put(5, "madly");
+//        phrases.put(6, "not at all");
+//        int num = nb_petals % 6;
+//        if (nb_petals > 6){
+//            return phrases.get(num);
+//        } else
+//            return phrases.get(nb_petals);
+//    }
+
+    public static String howMuchILoveYou(int nb_petals) {
+        String[] arr ={"not at all", "I love you",  "a little", "a lot", "passionately", "madly"};
+        return arr[nb_petals%6];
+    }
+
+
 }
+
+//       if (nb_petals > 6) {
+//               return phrases.get(nb_petals);
+//               } else
+//               return phrases.get(nb_petals % 6);
+//               }
 

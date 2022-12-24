@@ -417,8 +417,22 @@ public class KataTest {
 
     @Test
     public void testSingleTillManyCustomers() {
-//        assertEquals(15, Kata.solveSuperMarketQueue(new int[] { 1, 2, 3, 4, 5 }, 1));
+        assertEquals(15, Kata.solveSuperMarketQueue(new int[] { 1, 2, 3, 4, 5 }, 1));
         assertEquals(26, Kata.solveSuperMarketQueue(new int[] {2,3,10, 15, 18, 1, 8, 16}, 4));
+    }
+
+    @Test
+    public void test10() {
+        assertEquals("I love you", Kata.howMuchILoveYou(1));
+        assertEquals("a little", Kata.howMuchILoveYou(2));
+        assertEquals("not at all", Kata.howMuchILoveYou(6));
+    }
+
+    @Test
+    public void test11() {
+        assertEquals("I love you", Kata.howMuchILoveYou(1));
+        assertEquals("a little", Kata.howMuchILoveYou(2));
+        assertEquals("not at all", Kata.howMuchILoveYou(6));
     }
 }
 
