@@ -434,5 +434,11 @@ public class KataTest {
         assertEquals("a little", Kata.howMuchILoveYou(2));
         assertEquals("not at all", Kata.howMuchILoveYou(6));
     }
+
+    @Test
+    public void basicTests1212() {
+        assertEquals(0, Kata.goals(0, 0, 0));
+        assertEquals(58, Kata.goals(43, 10, 5));
+    }
 }
 

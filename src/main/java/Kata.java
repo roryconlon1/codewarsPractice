@@ -489,7 +489,9 @@ public class Kata {
         return arr[nb_petals % 6];
     }
 
-
+    public static int goals(int laLigaGoals, int copaDelReyGoals, int championsLeagueGoals) {
+        return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+    }
 }
 
 
