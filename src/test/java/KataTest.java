@@ -449,5 +449,12 @@ public class KataTest {
         assertEquals(0, Kata.sums(new int[]{-1,-2,-3,-4,-5}));
         assertEquals(9, Kata.sums(new int[]{-1,2,3,4,-5}));
     }
+
+    private static final double DELTA = 1e-15;
+    @Test
+    public void testSomethingsdv() {
+        assertEquals(1, Kata.find_average(new int[]{1,1,1}), DELTA);
+        assertEquals(2, Kata.find_average(new int[]{1, 2, 3}), DELTA);
+    }
 }
 

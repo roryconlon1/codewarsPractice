@@ -502,6 +502,17 @@ public class Kata {
         }
         return total;
     }
+
+    public static double find_average(int[] array) {
+        if (array.length == 0) {
+            return 0;
+        }
+        double total = 0;
+        for (int i = 0; i < array.length; i++) {
+            total += array[i];
+        }
+        return total / array.length;
+    }
 }
 
 
