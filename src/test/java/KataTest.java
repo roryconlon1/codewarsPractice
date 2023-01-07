@@ -440,5 +440,14 @@ public class KataTest {
         assertEquals(0, Kata.goals(0, 0, 0));
         assertEquals(58, Kata.goals(43, 10, 5));
     }
+
+    @Test
+    public void testSomethingElseAgain() {
+        assertEquals(15, Kata.sums(new int[]{1,2,3,4,5}));
+        assertEquals(13, Kata.sums(new int[]{1,-2,3,4,5}));
+        assertEquals(0, Kata.sums(new int[]{}));
+        assertEquals(0, Kata.sums(new int[]{-1,-2,-3,-4,-5}));
+        assertEquals(9, Kata.sums(new int[]{-1,2,3,4,-5}));
+    }
 }
 
