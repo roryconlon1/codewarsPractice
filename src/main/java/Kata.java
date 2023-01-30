@@ -528,6 +528,25 @@ public class Kata {
         return Integer.parseInt(sb.toString());
     }
 
+    public static void fizzBuzz(int n){
+        List<Integer> listOfNums = new ArrayList<>();
+        for (int i = 0; i < n + 1; i++){
+            listOfNums.add(i);
+        }
+        List<String> fizzBuzzList = new ArrayList<>();
+        for (int j = 1; j < listOfNums.size(); j ++){
+            if ((j % 3 == 0) && (j % 5 == 0)){
+                fizzBuzzList.add("FizzBuzz");
+            } else if (j % 5 == 0){
+                fizzBuzzList.add("Buzz");
+            } else if (j % 3 == 0){
+                fizzBuzzList.add("Fizz");
+            } else fizzBuzzList.add(String.valueOf(j));
+        }
+        System.out.println(fizzBuzzList);
+
+    }
+
 }
 
 
