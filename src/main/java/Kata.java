@@ -513,6 +513,7 @@ public class Kata {
         }
         return total / array.length;
     }
+
 }
 
 
