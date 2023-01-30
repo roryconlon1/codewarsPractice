@@ -515,9 +515,13 @@ public class Kata {
     }
 
     public static int sortDesc(int num) {
+//   convert number to string with String.valueOf() then add to charArray
         char[] numArray = String.valueOf(num).toCharArray();
+//        sort char array to ascending
         Arrays.sort(numArray);
+//        new stringBuilder to store sorted descending numbers
         StringBuilder sb = new StringBuilder();
+//        loop through charArray from end to start
         for (int i = numArray.length -1; i >= 0; i --){
             sb.append(numArray[i]);
         }
