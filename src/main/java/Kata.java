@@ -522,29 +522,29 @@ public class Kata {
 //        new stringBuilder to store sorted descending numbers
         StringBuilder sb = new StringBuilder();
 //        loop through charArray from end to start
-        for (int i = numArray.length -1; i >= 0; i --){
+        for (int i = numArray.length - 1; i >= 0; i--) {
             sb.append(numArray[i]);
         }
         return Integer.parseInt(sb.toString());
     }
 
-    public static void fizzBuzz(int n){
+    public static void fizzBuzz(int n) {
         List<Integer> listOfNums = new ArrayList<>();
-        for (int i = 0; i < n + 1; i++){
+        for (int i = 0; i < n + 1; i++) {
             listOfNums.add(i);
         }
         List<String> fizzBuzzList = new ArrayList<>();
-        for (int j = 1; j < listOfNums.size(); j ++){
-            if ((j % 3 == 0) && (j % 5 == 0)){
+        for (int j = 1; j < listOfNums.size(); j++) {
+            if ((j % 3 == 0) && (j % 5 == 0)) {
                 fizzBuzzList.add("FizzBuzz");
-            } else if (j % 5 == 0){
+            } else if (j % 5 == 0) {
                 fizzBuzzList.add("Buzz");
-            } else if (j % 3 == 0){
+            } else if (j % 3 == 0) {
                 fizzBuzzList.add("Fizz");
             } else fizzBuzzList.add(String.valueOf(j));
         }
-        System.out.println(fizzBuzzList);
-
+        String listString = String.join("\n", fizzBuzzList);
+        System.out.println(listString);
     }
 
 }
