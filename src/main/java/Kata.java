@@ -514,6 +514,16 @@ public class Kata {
         return total / array.length;
     }
 
+    public static int sortDesc(int num) {
+        char[] numArray = String.valueOf(num).toCharArray();
+        Arrays.sort(numArray);
+        StringBuilder sb = new StringBuilder();
+        for (int i = numArray.length -1; i >= 0; i --){
+            sb.append(numArray[i]);
+        }
+        return Integer.parseInt(sb.toString());
+    }
+
 }
 
 

@@ -456,5 +456,21 @@ public class KataTest {
         assertEquals(1, Kata.find_average(new int[]{1,1,1}), DELTA);
         assertEquals(2, Kata.find_average(new int[]{1, 2, 3}), DELTA);
     }
+
+    @Test
+    public void test_01() {
+        assertEquals(0, Kata.sortDesc(0));
+    }
+
+    @Test
+    public void test_02() {
+        assertEquals(51, Kata.sortDesc(15));
+    }
+
+
+    @Test
+    public void test_03() {
+        assertEquals(987654321, Kata.sortDesc(123456789));
+    }
 }
 
