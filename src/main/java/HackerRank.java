@@ -1,6 +1,4 @@
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class HackerRank {
 
@@ -52,4 +50,34 @@ public class HackerRank {
         String string = new String(finalCharArray);
         return string;
     }
+
+    public static void deleteNth(int[] elements, int maxOccurrences) {
+        Map<Integer, Integer> occurrenceMap = new HashMap<>();
+        List<Integer> revisedList = new ArrayList<>();
+        for (int i = 0; i < elements.length; i++) {
+            if (occurrenceMap.get(elements[i]) == null) {
+                occurrenceMap.put(elements[i], 1);
+            } else {
+                occurrenceMap.put(elements[i], occurrenceMap.get(elements[i]) + 1);
+            }
+            System.out.println(occurrenceMap);
+            if (occurrenceMap.get(elements[i]) <= maxOccurrences) {
+                revisedList.add(elements[i]);
+            }
+            System.out.println(revisedList);
+        }
+        System.out.println(revisedList);
+    }
+
+//    public static int lonelyinteger(List<Integer> a) {
+//        Map<Integer, Integer> numMap = new HashMap<>();
+//        for (int i = 0; i < a.size(); i++) {
+//            if (numMap.get(a.get(i)) == null) {
+//                numMap.put(a.get(i), 1);
+//            } else
+//                numMap.put(a.get(i), (numMap.get(a.get(i))) + 1);
+//        }
+//        System.out.println(numMap);
+//        return 2;
+//    }
 }
