@@ -22,4 +22,17 @@ public class HackerRank {
         }
         return count;
     }
+
+    public static void miniMaxSum(List<Integer> arr) {
+        Collections.sort(arr);
+        long min = 0;
+        long max = 0;
+        for (int i = 0; i < arr.size(); i ++){
+            min += arr.get(i);
+            max += arr.get(i);
+        }
+        min -= arr.get(arr.size() - 1);
+        max -= arr.get(0);
+        System.out.println(min + " " + max);
+    }
 }
