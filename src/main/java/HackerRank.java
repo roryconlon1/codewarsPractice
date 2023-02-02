@@ -80,4 +80,13 @@ public class HackerRank {
 //        System.out.println(numMap);
 //        return 2;
 //    }
+
+    public static int lonelyinteger(List<Integer> a) {
+        for (int i = 0; i < a.size(); i++) {
+            if (a.indexOf(a.get(i)) == a.lastIndexOf(a.get(i))) {
+                return a.get(i);
+            }
+        }
+        return 1;
+    }
 }
