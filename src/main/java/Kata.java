@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class Kata {
@@ -547,6 +548,26 @@ public class Kata {
         System.out.println(listString);
     }
 
+    public static String isPangram(List<String> pangram) {
+        List<Integer> results = new ArrayList<>();
+        for (int i = 0; i < pangram.size(); i ++){
+            if (pangram.get(i)
+                    .chars()
+                    .filter(j -> j>= 'a' && j <= 'z')
+                    .distinct()
+                    .count() == 26){
+                results.add(1);
+            } else results.add(0);
+        }
+        String joinResult = results.stream()
+                .map(i -> i.toString())
+                .collect(Collectors.joining(""));
+        return joinResult;
+    }
+
+
 }
+
+
 
 
