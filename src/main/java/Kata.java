@@ -565,6 +565,12 @@ public class Kata {
         return joinResult;
     }
 
+        public static String dnaToRna(String dna) {
+            String newDna = dna.replace('T', 'U');
+            return newDna;
+        }
+
+
 
 }
 

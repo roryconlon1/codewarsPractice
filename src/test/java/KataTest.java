@@ -472,5 +472,15 @@ public class KataTest {
     public void test_03() {
         assertEquals(987654321, Kata.sortDesc(123456789));
     }
+
+    @Test
+    public void testDna() throws Exception {
+        assertEquals("UUUU", Kata.dnaToRna("TTTT"));
+    }
+
+    @Test
+    public void testDna2() throws Exception {
+        assertEquals("GCAU", Kata.dnaToRna("GCAT"));
+    }
 }
 
