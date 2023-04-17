@@ -482,5 +482,14 @@ public class KataTest {
     public void testDna2() throws Exception {
         assertEquals("GCAU", Kata.dnaToRna("GCAT"));
     }
+
+    @Test
+    public void staticTests() {
+        assertEquals("no one likes this", Kata.whoLikesIt());
+        assertEquals("Peter likes this", Kata.whoLikesIt("Peter"));
+        assertEquals("Jacob and Alex like this", Kata.whoLikesIt("Jacob", "Alex"));
+        assertEquals("Max, John and Mark like this", Kata.whoLikesIt("Max", "John", "Mark"));
+        assertEquals("Alex, Jacob and 2 others like this", Kata.whoLikesIt("Alex", "Jacob", "Mark", "Max"));
+    }
 }
 

@@ -550,12 +550,12 @@ public class Kata {
 
     public static String isPangram(List<String> pangram) {
         List<Integer> results = new ArrayList<>();
-        for (int i = 0; i < pangram.size(); i ++){
+        for (int i = 0; i < pangram.size(); i++) {
             if (pangram.get(i)
                     .chars()
-                    .filter(j -> j>= 'a' && j <= 'z')
+                    .filter(j -> j >= 'a' && j <= 'z')
                     .distinct()
-                    .count() == 26){
+                    .count() == 26) {
                 results.add(1);
             } else results.add(0);
         }
@@ -565,11 +565,26 @@ public class Kata {
         return joinResult;
     }
 
-        public static String dnaToRna(String dna) {
-            String newDna = dna.replace('T', 'U');
-            return newDna;
-        }
+    public static String dnaToRna(String dna) {
+        String newDna = dna.replace('T', 'U');
+        return newDna;
+    }
 
+    public static String whoLikesIt(String... names) {
+        if (names.length < 1) {
+            return "no one likes this";
+        }
+        if (names.length == 1) {
+            return names[0] + " likes this";
+        }
+        if (names.length == 2) {
+            return names[0] + " and " + names[1] + " like this";
+        }
+        if (names.length == 3) {
+            return names[0] + ", " + names[1] + " and " + names[2] + " like this";
+        }
+        return names[0] + ", " + names[1] + " and " + (names.length - 2) + " others like this";
+    }
 
 
 }
