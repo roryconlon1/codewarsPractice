@@ -586,6 +586,23 @@ public class Kata {
         return names[0] + ", " + names[1] + " and " + (names.length - 2) + " others like this";
     }
 
+    public int search(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == target) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public int firstBadVersion(int n) {
+        for (int i = 0; i < n; i++) {
+            if (isBadVersion(i)) {
+                return i;
+            }
+        }
+        return n;
+    }
 
 }
 
